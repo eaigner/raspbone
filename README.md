@@ -1,3 +1,4 @@
+
 ### Creating the base image on OSX
 
 1. Download Raspbian Lite and unzip the `.img`
@@ -20,3 +21,5 @@ After your PI is reachable on the network, run the `provision.yml` playbook to
 remove unwanted packages. The `,` at the end of the IP is necessary!
 
         ansible-playbook -i "<raspberrypi-ip>," provision.yml -k
+
+This will reduce your used disk space from `912M` to `469M`
