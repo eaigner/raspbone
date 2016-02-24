@@ -1,0 +1,62 @@
+---
+- hosts: all
+  sudo: yes
+  remote_user: pi
+  tasks:
+    - name: remove large files
+      command: rm -rf {{item}}
+      with_items:
+        - "/opt/*"
+    - name: remove unused packages
+      apt: name={{item}} state=absent purge=yes
+      with_items:
+        - man-db
+        - manpages
+        - dpkg-dev
+        - libc-dev-bin
+        - libc6-dev:armh
+        - libfreetype6-dev
+        - libgcc-4.9-dev:armhf
+        - libpng12-dev:armhf
+        - libraspberrypi-dev
+        - libstdc++-4.9-dev:armhf
+        - linux-libc-dev:armhf
+        - manpages-dev
+        - zlib1g-dev:armhf
+        - libx11-6:armhf
+        - libx11-data
+        - libpython-stdlib:armhf
+        - libpython2.7:armhf
+        - libpython2.7-minimal:armhf
+        - libpython2.7-stdlib:armhf
+        - python-apt
+        - python-apt-common
+        - python-rpi.gpio
+        - libasound2:armhf
+        - libasound2-data
+        - libtext-soundex-perl
+        - gcc-4.6-base:armhf
+        - gcc-4.7-base:armhf
+        - gcc-4.8-base:armhf
+        - libgcc-4.9-dev:armhf
+        - libgcc1:armhf
+        - libraspberrypi-doc
+        - keyboard-configuration
+        - xkb-data
+        - triggerhappy
+        - lsb-release
+        - libxau6:armhf
+        - libxcb1:armhf
+        - libxdmcp6:armhf
+        - libubsan0:armhf
+        - libsamplerate0:armhf
+        - libgomp1:armhf
+        - libfreetype6:armhf
+        - libfakeroot:armhf
+        - libasan1:armhf
+        - libatomic1:armhf
+        - fakeroot
+    - name: apt-get autoremove
+      command: apt-get -y autoremove
+    - name: apt-get clean
+      command: apt-get -y clean
