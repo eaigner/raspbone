@@ -3,18 +3,46 @@
   sudo: yes
   remote_user: pi
   tasks:
+    - name: change locale to POSIX
+      command: update-locale LANG=POSIX
+      ignore_errors: yes
+
     - name: remove large files
       command: rm -rf {{item}}
       with_items:
         - "/opt/*"
+
     - name: remove unused packages
-      apt: name={{item}} state=absent purge=yes
+      apt: name={{item}} state=absent purge=yes update_cache=yes
       with_items:
+        - libglib2.0-0
+        - krb5-locales
+        - geoip-database
+        - rename
+        - strace
+        - perl
+        - perl-modules
+        - locales
+        - binutils
+        - libicu52
+        - gdb
+        - gdbserver
+        - groff-base
+        - netcat-openbsd
+        - netcat-traditional
+        - plymouth
+        - samba-common
+        - tasksel
+        - tasksel-data
+        - traceroute
+        - vim-common
+        - vim-tiny
+        - whiptail
         - man-db
         - manpages
         - dpkg-dev
         - libc-dev-bin
-        - libc6-dev:armh
+        - libc6-dev:armhf
         - libfreetype6-dev
         - libgcc-4.9-dev:armhf
         - libpng12-dev:armhf
@@ -56,7 +84,15 @@
         - libasan1:armhf
         - libatomic1:armhf
         - fakeroot
+        - cpp
+        - cpp-4.9
+        - libc6-dbg
+
     - name: apt-get autoremove
       command: apt-get -y autoremove
+
     - name: apt-get clean
       command: apt-get -y clean
+      
+    - name: reboot
+      command: reboot
