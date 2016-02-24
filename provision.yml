@@ -15,101 +15,101 @@
     - name: remove unused packages
       apt: name={{item}} state=absent purge=yes update_cache=yes
       with_items:
-        - hardlink
-        - ncdu
-        - ed
-        - dc
-        - makedev
-        - fbset
-        - less
-        - lua5.1
-        - parted
-        - curl
-        - info
-        - luajit
-        - unzip
-        - bsdmainutils
-        - psmisc
-        - v4l-utils
-        - cpio
-        - dialog
-        - libsqlite3-0
-        - libfreetype6
         - aptitude
         - aptitude-common
-        - libxapian22
-        - ncurses-term
-        - libglib2.0-0
-        - krb5-locales
-        - geoip-database
-        - rename
-        - strace
-        - perl
-        - perl-modules
-        - locales
         - binutils
-        - libicu52
-        - gdb
-        - gdbserver
-        - groff-base
-        - netcat-openbsd
-        - netcat-traditional
-        - plymouth
-        - samba-common
-        - tasksel
-        - tasksel-data
-        - traceroute
-        - vim-common
-        - vim-tiny
-        - whiptail
-        - man-db
-        - manpages
+        - bsdmainutils
+        - cpio
+        - cpp
+        - cpp-4.9
+        - curl
+        - dc
+        - dialog
         - dpkg-dev
-        - libc-dev-bin
-        - libc6-dev:armhf
-        - libfreetype6-dev
-        - libgcc-4.9-dev:armhf
-        - libpng12-dev:armhf
-        - libraspberrypi-dev
-        - libstdc++-4.9-dev:armhf
-        - linux-libc-dev:armhf
-        - manpages-dev
-        - zlib1g-dev:armhf
-        - libx11-6:armhf
-        - libx11-data
-        - libpython-stdlib:armhf
-        - libpython2.7:armhf
-        - libpython2.7-minimal:armhf
-        - libpython2.7-stdlib:armhf
-        - python-apt
-        - python-apt-common
-        - python-rpi.gpio
-        - libasound2:armhf
-        - libasound2-data
-        - libtext-soundex-perl
+        - ed
+        - fakeroot
+        - fbset
         - gcc-4.6-base:armhf
         - gcc-4.7-base:armhf
         - gcc-4.8-base:armhf
+        - gdb
+        - gdbserver
+        - geoip-database
+        - groff-base
+        - hardlink
+        - info
+        - keyboard-configuration
+        - krb5-locales
+        - less
+        - libasan1:armhf
+        - libasound2-data
+        - libasound2:armhf
+        - libatomic1:armhf
+        - libc-dev-bin
+        - libc6-dbg
+        - libc6-dev:armhf
+        - libfakeroot:armhf
+        - libfreetype6
+        - libfreetype6-dev
+        - libgcc-4.9-dev:armhf
         - libgcc-4.9-dev:armhf
         - libgcc1:armhf
+        - libglib2.0-0
+        - libgomp1:armhf
+        - libicu52
+        - libpng12-dev:armhf
+        - libpython-stdlib:armhf
+        - libpython2.7-minimal:armhf
+        - libpython2.7-stdlib:armhf
+        - libpython2.7:armhf
+        - libraspberrypi-dev
         - libraspberrypi-doc
-        - keyboard-configuration
-        - xkb-data
-        - triggerhappy
-        - lsb-release
+        - libsamplerate0:armhf
+        - libsqlite3-0
+        - libstdc++-4.9-dev:armhf
+        - libtext-soundex-perl
+        - libubsan0:armhf
+        - libx11-6:armhf
+        - libx11-data
+        - libxapian22
         - libxau6:armhf
         - libxcb1:armhf
         - libxdmcp6:armhf
-        - libubsan0:armhf
-        - libsamplerate0:armhf
-        - libgomp1:armhf
-        - libfakeroot:armhf
-        - libasan1:armhf
-        - libatomic1:armhf
-        - fakeroot
-        - cpp
-        - cpp-4.9
-        - libc6-dbg
+        - linux-libc-dev:armhf
+        - locales
+        - lsb-release
+        - lua5.1
+        - luajit
+        - makedev
+        - man-db
+        - manpages
+        - manpages-dev
+        - ncdu
+        - ncurses-term
+        - netcat-openbsd
+        - netcat-traditional
+        - parted
+        - perl
+        - perl-modules
+        - plymouth
+        - psmisc
+        - python-apt
+        - python-apt-common
+        - python-rpi.gpio
+        - rename
+        - samba-common
+        - strace
+        - tasksel
+        - tasksel-data
+        - traceroute
+        - triggerhappy
+        - unzip
+        - v4l-utils
+        - vim-common
+        - vim-tiny
+        - whiptail
+        - xkb-data
+        - zlib1g-dev:armhf
 
     - name: apt-get autoremove
       command: apt-get -y autoremove
