@@ -15,6 +15,30 @@
     - name: remove unused packages
       apt: name={{item}} state=absent purge=yes update_cache=yes
       with_items:
+        - hardlink
+        - ncdu
+        - ed
+        - dc
+        - makedev
+        - fbset
+        - less
+        - lua5.1
+        - parted
+        - curl
+        - info
+        - luajit
+        - unzip
+        - bsdmainutils
+        - psmisc
+        - v4l-utils
+        - cpio
+        - dialog
+        - libsqlite3-0
+        - libfreetype6
+        - aptitude
+        - aptitude-common
+        - libxapian22
+        - ncurses-term
         - libglib2.0-0
         - krb5-locales
         - geoip-database
@@ -79,7 +103,6 @@
         - libubsan0:armhf
         - libsamplerate0:armhf
         - libgomp1:armhf
-        - libfreetype6:armhf
         - libfakeroot:armhf
         - libasan1:armhf
         - libatomic1:armhf
@@ -93,6 +116,6 @@
 
     - name: apt-get clean
       command: apt-get -y clean
-      
+
     - name: reboot
       command: reboot
