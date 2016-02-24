@@ -47,17 +47,17 @@
         - libatomic1:armhf
         - libc-dev-bin
         - libc6-dbg
-        - libc6-dev:armhf
+        - libc6-dev
         - libfakeroot:armhf
         - libfreetype6
         - libfreetype6-dev
-        - libgcc-4.9-dev:armhf
-        - libgcc-4.9-dev:armhf
+        - libgcc-4.9-dev
+        - libgcc-4.9-dev
         - libgcc1:armhf
         - libglib2.0-0
         - libgomp1:armhf
         - libicu52
-        - libpng12-dev:armhf
+        - libpng12-dev
         - libpython-stdlib:armhf
         - libpython2.7-minimal:armhf
         - libpython2.7-stdlib:armhf
@@ -65,7 +65,7 @@
         - libraspberrypi-dev
         - libraspberrypi-doc
         - libsamplerate0:armhf
-        - libstdc++-4.9-dev:armhf
+        - libstdc++-4.9-dev
         - libtext-soundex-perl
         - libubsan0:armhf
         - libx11-6:armhf
@@ -74,7 +74,7 @@
         - libxau6:armhf
         - libxcb1:armhf
         - libxdmcp6:armhf
-        - linux-libc-dev:armhf
+        - linux-libc-dev
         - locales
         - lsb-release
         - lua5.1
@@ -108,7 +108,7 @@
         - vim-tiny
         - whiptail
         - xkb-data
-        - zlib1g-dev:armhf
+        - zlib1g-dev
 
     - name: apt-get autoremove
       command: apt-get -y autoremove
