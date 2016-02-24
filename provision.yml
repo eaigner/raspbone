@@ -41,39 +41,35 @@
         - keyboard-configuration
         - krb5-locales
         - less
-        - libasan1:armhf
+        - libasan1
         - libasound2-data
-        - libasound2:armhf
-        - libatomic1:armhf
+        - libasound2
+        - libatomic1
         - libc-dev-bin
         - libc6-dbg
         - libc6-dev
-        - libfakeroot:armhf
+        - libfakeroot
         - libfreetype6
         - libfreetype6-dev
         - libgcc-4.9-dev
         - libgcc-4.9-dev
         - libgcc1:armhf
         - libglib2.0-0
-        - libgomp1:armhf
+        - libgomp1
         - libicu52
         - libpng12-dev
-        - libpython-stdlib:armhf
-        - libpython2.7-minimal:armhf
-        - libpython2.7-stdlib:armhf
-        - libpython2.7:armhf
         - libraspberrypi-dev
         - libraspberrypi-doc
-        - libsamplerate0:armhf
+        - libsamplerate0
         - libstdc++-4.9-dev
         - libtext-soundex-perl
-        - libubsan0:armhf
-        - libx11-6:armhf
+        - libubsan0
+        - libx11-6
         - libx11-data
         - libxapian22
-        - libxau6:armhf
-        - libxcb1:armhf
-        - libxdmcp6:armhf
+        - libxau6
+        - libxcb1
+        - libxdmcp6
         - linux-libc-dev
         - locales
         - lsb-release
